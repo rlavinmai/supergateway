@@ -8,7 +8,7 @@ target "common" {
 }
 
 group "default" {
-  targets = ["base", "uvx", "deno"]
+  targets = ["base", "uvx", "deno", "claude"]
 }
 
 target "base" {
@@ -47,5 +47,13 @@ target "deno" {
     "supercorp/supergateway:${VERSION}-deno",
     "ghcr.io/supercorp-ai/supergateway:deno",
     "ghcr.io/supercorp-ai/supergateway:${VERSION}-deno"
+  ]
+}
+
+target "claude" {
+  inherits   = ["common"]
+  dockerfile = "docker/claude.Dockerfile"
+  tags = [
+    "supergateway-claude:latest"
   ]
 }

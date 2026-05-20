@@ -1,0 +1,66 @@
+{
+  "servers": {
+    "onetrustmcpserver": {
+      "transport": "streamableHttp",
+      "url": "https://host.docker.internal:5003/mcp",
+      "oauth2BearerEnv": "ONETRUST_MCP_API_TOKEN",
+      "forceProtocolVersion": "2024-11-05",
+      "env": {
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0"
+      }
+    },
+    "projectplace-mcp": {
+      "transport": "sse",
+      "url": "http://localhost:5017/sse",
+      "forceProtocolVersion": "2024-11-05"
+    },
+    "agileplace-mcp": {
+      "transport": "streamableHttp",
+      "url": "http://localhost:5018/mcp/",
+      "oauth2BearerEnv": "AGILEPLACE_MCP_AUTH_TOKEN",
+      "forceProtocolVersion": "2024-11-05"
+    },
+    "sqlmcpserverdocker": {
+      "transport": "streamableHttp",
+      "url": "http://host.docker.internal:5000/mcp"
+    },
+    "phase-1-lucid-mcp": {
+      "transport": "streamableHttp",
+      "url": "http://host.docker.internal:5004/mcp",
+      "oauth2BearerEnv": "LUCID_MCP_BEARER_TOKEN"
+    },
+    "azure-observability-mcp": {
+      "transport": "streamableHttp",
+      "url": "http://host.docker.internal:5007/mcp",
+      "oauth2BearerEnv": "AZURE_OBSERVABILITY_MCP_BEARER_TOKEN",
+      "forceProtocolVersion": "2024-11-05"
+    },
+    "msftteamsnotificationhttpmcpserver": {
+      "transport": "streamableHttp",
+      "url": "http://host.docker.internal:5008/mcp",
+      "forceProtocolVersion": "2024-11-05"
+    },
+    "image2mcp": {
+      "transport": "streamableHttp",
+      "url": "http://host.docker.internal:5016/mcp",
+      "oauth2BearerEnv": "IMAGE2MCP_BEARER_TOKEN",
+      "forceProtocolVersion": "2024-11-05"
+    },
+    "zendesk-mcp": {
+      "transport": "streamableHttp",
+      "url": "http://host.docker.internal:5019/mcp",
+      "forceProtocolVersion": "2024-11-05"
+    },
+    "blackkite-mcp": {
+      "transport": "streamableHttp",
+      "url": "http://host.docker.internal:5014/mcp",
+      "forceProtocolVersion": "2024-11-05"
+    },
+    "msft-email-mcp": {
+      "transport": "streamableHttp",
+      "url": "http://localhost:5010/mcp",
+      "oauth2BearerEnv": "MSFT_EMAIL_MCP_AUTH_TOKEN",
+      "forceProtocolVersion": "2024-11-05"
+    }
+  }
+}

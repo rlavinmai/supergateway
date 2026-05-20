@@ -1,0 +1,154 @@
+{
+  "mcpServers": {
+    "onetrustmcpserver": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--env-file",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.env",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "onetrustmcpserver"
+      ]
+    },
+    "projectplace-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--network",
+        "container:projectplace-mcp-projectplace-mcp-http-1",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "projectplace-mcp"
+      ]
+    },
+    "agileplace-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--env-file",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.env",
+        "--network",
+        "container:agileplace-mcp-http",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "agileplace-mcp"
+      ]
+    },
+    "sqlmcpserverdocker": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "sqlmcpserverdocker"
+      ]
+    },
+    "phase-1-lucid-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--env-file",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.env",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "phase-1-lucid-mcp"
+      ]
+    },
+    "azure-observability-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--env-file",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.env",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "azure-observability-mcp"
+      ]
+    },
+    "msftteamsnotificationhttpmcpserver": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "msftteamsnotificationhttpmcpserver"
+      ]
+    },
+    "image2mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--env-file",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.env",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "image2mcp"
+      ]
+    },
+    "zendesk-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "zendesk-mcp"
+      ]
+    },
+    "blackkite-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "blackkite-mcp"
+      ]
+    },
+    "msft-email-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--env-file",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.env",
+        "--network",
+        "container:msft-email-mcp",
+        "-v",
+        "C:\\Users\\rob.lavin\\OneDrive - MAI Capital Management\\MAIIT\\supergateway\\start-mcp-servers.json:/config/start-mcp-servers.json:ro",
+        "supergateway-claude",
+        "msft-email-mcp"
+      ]
+    }
+  }
+}
