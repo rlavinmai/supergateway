@@ -10,8 +10,8 @@
       }
     },
     "projectplace-mcp": {
-      "transport": "sse",
-      "url": "http://localhost:5017/sse",
+      "transport": "streamableHttp",
+      "url": "http://localhost:5017/mcp",
       "forceProtocolVersion": "2024-11-05"
     },
     "agileplace-mcp": {
@@ -31,8 +31,14 @@
     },
     "azure-observability-mcp": {
       "transport": "streamableHttp",
-      "url": "http://host.docker.internal:5007/mcp",
+      "url": "http://host.docker.internal:5009/mcp",
       "oauth2BearerEnv": "AZURE_OBSERVABILITY_MCP_BEARER_TOKEN",
+      "forceProtocolVersion": "2024-11-05"
+    },
+    "ai-usage-mcp": {
+      "transport": "streamableHttp",
+      "url": "http://host.docker.internal:5007/mcp",
+      "oauth2BearerEnv": "AI_USAGE_MCP_BEARER_TOKEN",
       "forceProtocolVersion": "2024-11-05"
     },
     "msftteamsnotificationhttpmcpserver": {
